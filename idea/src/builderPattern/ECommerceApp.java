@@ -7,12 +7,13 @@ public class ECommerceApp {
 
         Integer age = null;
         Scanner hlc = new Scanner(System.in);
+        String firstName, lastName, email, address, phone;
 
         System.out.println("Application Registration Form");
         System.out.println("Please complete the following form:\n");
-
         System.out.print("Enter your first name: ");
-        String firstName = hlc.nextLine().trim();
+        firstName = hlc.nextLine().trim();
+
         while (firstName.isEmpty()) {
             System.out.println("This field is mandatory. Please provide your first name.\n");
             System.out.print("Enter your first name: ");
@@ -20,7 +21,8 @@ public class ECommerceApp {
         }
 
         System.out.print("Enter your last name: ");
-        String lastName = hlc.nextLine();
+        lastName = hlc.nextLine();
+
         while (lastName.isEmpty()) {
             System.out.println("This field is mandatory. Please provide your last name.\n");
             System.out.print("Enter your last name: ");
@@ -28,13 +30,14 @@ public class ECommerceApp {
         }
 
         System.out.print("Enter your email (optional): ");
-        String email = hlc.nextLine();
+        email = hlc.nextLine();
 
         System.out.print("Enter your address (optional): ");
-        String address = hlc.nextLine();
+        address = hlc.nextLine();
 
         System.out.print("Enter your phone number: ");
-        String phone = hlc.nextLine();
+        phone = hlc.nextLine();
+
         while (phone.isEmpty()) {
             System.out.println("This field is mandatory. Please provide your phone number.\n");
             System.out.print("Enter your phone number: ");
@@ -44,15 +47,12 @@ public class ECommerceApp {
         while (age == null || age <= 0) {
             System.out.print("Enter your age: ");
             String input = hlc.nextLine().trim();
-
             if (input.isEmpty()) {
                 System.out.println("This field is mandatory. Please provide your age.\n");
                 continue;
             }
-
             if (input.matches("\\d+")) {
                 age = Integer.parseInt(input);
-
                 if (age <= 0) {
                     System.out.println("Please enter a valid age.\n");
                 }
@@ -68,7 +68,6 @@ public class ECommerceApp {
                 .lastName(lastName)
                 .phone(phone)
                 .firstName(firstName)
-
                 .build();
 
         System.out.println("\nUser Information");
