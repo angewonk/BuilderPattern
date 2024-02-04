@@ -7,13 +7,13 @@ public class ECommerceApp {
 
         Scanner userInput = new Scanner(System.in);
 
-        System.out.println("====== Welcome to the Application Registration Form! ======");
-        System.out.println("Please fill out the form.\n");
+        System.out.println("Application Registration Form");
+        System.out.println("Please complete the following form:\n");
 
         System.out.print("Enter your first name: ");
         String firstName = userInput.nextLine().trim();
         while (firstName.isEmpty()) {
-            System.out.println("This field is required. Please enter your first name.\n");
+            System.out.println("This field is mandatory. Please provide your first name.\n");
             System.out.print("Enter your first name: ");
             firstName = userInput.nextLine().trim();
         }
@@ -21,7 +21,7 @@ public class ECommerceApp {
         System.out.print("Enter your last name: ");
         String lastName = userInput.nextLine();
         while (lastName.isEmpty()) {
-            System.out.println("This field is required. Please enter your last name.\n");
+            System.out.println("This field is mandatory. Please provide your last name.\n");
             System.out.print("Enter your last name: ");
             lastName = userInput.nextLine().trim();
         }
@@ -35,7 +35,7 @@ public class ECommerceApp {
         System.out.print("Enter your phone number: ");
         String phone = userInput.nextLine();
         while (phone.isEmpty()) {
-            System.out.println("This field is required. Please enter your phone number.\n");
+            System.out.println("This field is mandatory. Please provide your phone number.\n");
             System.out.print("Enter your phone number: ");
             phone = userInput.nextLine().trim();
         }
@@ -46,7 +46,7 @@ public class ECommerceApp {
             String input = userInput.nextLine().trim();
 
             if (input.isEmpty()) {
-                System.out.println("This field is required. Please enter your age.\n");
+                System.out.println("This field is mandatory. Please provide your age.\n");
                 continue;
             }
 
@@ -70,9 +70,8 @@ public class ECommerceApp {
                 .email(email)
                 .build();
 
-        System.out.println("\n");
-        System.out.println("====== User Information ======\n");
-        System.out.println("First Name: " + user.firstName);
+        System.out.println("\nUser Information");
+        System.out.println("\nFirst Name: " + user.firstName);
         System.out.println("Last Name: " + user.lastName);
         System.out.println("Email: " + user.email);
         System.out.println("Address: " + user.address);
