@@ -62,12 +62,13 @@ public class ECommerceApp {
         }
 
         User user = new User.UserBuilder()
+                .address(address)
+                .email(email)
                 .age(age)
                 .lastName(lastName)
                 .phone(phone)
-                .address(address)
                 .firstName(firstName)
-                .email(email)
+
                 .build();
 
         System.out.println("\nUser Information");
