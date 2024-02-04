@@ -54,7 +54,7 @@ public class ECommerceApp {
                 age = Integer.parseInt(input);
 
                 if (age <= 0) {
-                    System.out.println("Please enter a valid positive age.\n");
+                    System.out.println("Please enter a valid age.\n");
                 }
             } else {
                 System.out.println("Error! Please enter a valid age.\n");
